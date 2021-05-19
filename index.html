@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import link from Google font icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- linking the stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- linking the api document -->
+    <link rel="html" href="api.html">
+
+    <title>Gmail Clone</title>
+</head>
+<body>
+
+<!-- Start of head section -->
+<div class="header">
+
+    <!-- Toggle bar and the Gmail logo -->
+    <div class="leftheader">
+        <span class="material-icons">
+            menu
+            </span>
+        <img src="./gmail-logo.png" alt="">
+    </div>
+
+    <!-- Search bar -->
+    <div class="middleheader">
+        <span class="material-icons">
+            search
+            </span>
+        <input type="text" placeholder="Search mail">
+        <span class="material-icons">
+            keyboard_arrow_down
+            </span>
+    </div>
+
+    <!-- Support, settings and Google aps Icons -->
+    <div class="rightheader">
+        <span class="material-icons">
+            help_outline
+            </span>
+        <span class="material-icons">
+            settings
+            </span>
+        <span class="material-icons">
+            apps
+            </span>
+        <span class="material-icons">
+            account_circle
+            </span>
+    </div>
+
+</div>
+<!-- End of header section -->
+
+
+<!-- Start of Main Body Section -->
+
+<div class="main">
+
+<!-- Start of Side bar section -->
+    <div class="sidebar">
+        <button class="compose" onclick="onComposeClick()">
+            <span class="material-icons">
+                add
+                </span>
+            Compose
+        </button>
+
+        <div class="options_active">
+            <span class="material-icons">
+                inbox
+                </span>
+            <h3>Inbox</h3>
+        </div>
+
+        <div class="options">
+            <span class="material-icons">
+                star
+                </span>
+            <h3>Starred</h3>
+        </div>
+
+        <div class="options">
+            <span class="material-icons">
+                watch_later
+                </span>
+            <h3>Snoozed</h3>
+        </div>
+
+        <div class="options">
+            <span class="material-icons">
+                send
+                </span>
+            <h3>Sent</h3>
+        </div>
+
+        <div class="options">
+            <span class="material-icons">
+                description
+                </span>
+            <h3>Drafts</h3>
+        </div>
+
+        <div class="options">
+            <span class="material-icons">
+                expand_more
+                </span>
+            <h3>More</h3>
+        </div>
+
+        <div class="meet">
+            <h2>Meet</h2>
+
+            <div class="newmeeting">
+                <span class="material-icons">
+                    videocam
+                    </span>
+                <h3>New Meeting</h3>
+            </div>
+
+            <div class="joinameet">
+                <span class="material-icons">
+                    keyboard
+                    </span>
+                <h3>Join a Meeting</h3>
+            </div>
+
+        </div>
+
+        <div class="hangouts">
+            <h2>Hangouts</h2>
+
+            <div class="accountcircle">
+                <span class="material-icons">
+                    account_circle
+                    </span>
+                <h3>Username</h3>
+                <span class="material-icons" id="keyboard">
+                   keyboard_arrow_down
+                    </span>
+                <span class="material-icons" id="add">
+                    add
+                    </span>
+            </div>
+            
+        </div>
+
+    </div>
+<!-- End of Sidebar Section -->
+
+
+<!-- Email List Header Starts -->
+    <div class="emailList">
+    <!-- Setting section starts -->
+        <div class="settingssection">
+            <div class="settingsleft">
+                <input type="checkbox">
+                <span class="material-icons" style="margin-left:0px">
+                    keyboard_arrow_down
+                    </span>
+                <span class="material-icons" style="margin-left:25px">
+                    refresh
+                    </span>
+                <span class="material-icons" style="margin-left:25px">
+                    more_vert
+                    </span>
+            </div>
+            <div class="settingsright">
+                <span class="material-icons">
+                    keyboard_arrow_left
+                    </span>
+                <span class="material-icons">
+                    keyboard_arrow_right
+                    </span> 
+                <span class="material-icons">
+                    keyboard
+                    </span>
+                <span class="material-icons">
+                    keyboard_arrow_down
+                    </span>
+            </div>
+        </div>
+    <!-- Setting Section Ends -->
+
+
+    <!-- Start of the tabs Primary, Promotion and Social  -->
+    <div class="emaillist_sections">
+        <div class="section section_selected">
+            <span class="material-icons">
+                inbox
+                </span>   
+             <h4>Primary</h4>
+        </div>
+
+        <div class="section">
+            <span class="material-icons">
+                people
+                </span>  
+            <h4>Social</h4>
+        </div>
+
+        <div class="section">
+            <span class="material-icons">
+                local_offer
+                </span>   
+            <h4>Promotions</h4>
+        </div>
+    </div>
+    <!-- End of the tabs Primary, Promotion and Social -->
+
+    <!-- Email List Starts -->
+    <div class="emaillist_list">
+        <!-- Email row starts -->
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <div class="emailrow">
+            <div class="emailrow_options">
+                <input type="checkbox">
+                <span class="material-icons">
+                    star_border
+                    </span>
+            </div>
+            <h3 class="emailrow">GitHub</h3>
+            <div class="emailrow_message">
+                <h4>[GitHub] A third-party OAuth application has been added to your account<span class="message"> - Hey Sharath Vasan! A Third Party OAut...</span></h4>
+            </div>
+            <p class="emailrow_time">11:00 AM</p>
+        </div>
+        <!-- Email row Ends -->
+
+    </div>
+
+    <!-- Email List Ends -->
+
+
+    </div>
+<!-- Email List Header Ends -->
+
+
+</div>
+
+
+<!-- Linking the script.js file -->
+<script src="./script.js"></script>
+    
+</body>
+</html>
